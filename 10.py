@@ -1,39 +1,20 @@
-def remover_repetidos_logica(lista):
-    i = 0  # Índice inicial
-    while i < len(lista):
-        j = i + 1  # Índice para comparar com o próximo elemento
-        while j < len(lista):
-            # Se encontrar um elemento repetido, remove
-            if lista[i] == lista[j]:
-                lista.pop(j)
-            else:
-                j += 1  # Só avança o índice se não remover
-        i += 1  # Avança o índice principal
 
-    return lista
+num = []
+sem = []
 
 
-# Recebe os números digitados pelo usuário e cria uma lista
-def receber_numeros():
-    lista = []
-    print("Digite os números (digite 'fim' para terminar):")
+for x in range(5):
+    N = int(input("Digite um número: "))
+    num.append(N)
+    '''append serve para add elementos num array/lista'''
 
-    while True:
-        entrada = input("Número: ")
-        if entrada.lower() == 'fim':  # Condição para encerrar a entrada
-            break
-        try:
-            numero = int(entrada)  # Converte a entrada para inteiro
-            lista.append(numero)
-        except ValueError:
-            print("Por favor, digite um número válido.")
+for i in num:
+    if i not in sem:
+        sem.append(i)
+'''novamente usando a função append(add), vamos colocar os N°´s dentro de uma nova lista\n
+sem não repeti-los, então atraves do for pegamos a lista anterior com od dados fornecidos pelo user e \n
+criamos uma condicional, se o N° tal da lista A NÃO estiver na lista B, adicioneo a lista, se estiver,\n
+passa pro próx'''
 
-    return lista
-
-
-# Parte principal do código
-lista_usuario = receber_numeros()  # Recebe os números do usuário
-print("Lista antes de remover repetidos:", lista_usuario)
-
-lista_sem_repetidos = remover_repetidos_logica(lista_usuario)  # Remove repetidos
-print("Lista sem repetidos:", lista_sem_repetidos)
+print("Lista original:", num)
+print("Lista sem duplicatas:", sem)
