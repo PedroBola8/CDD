@@ -1,12 +1,9 @@
 package Fundamentos2;
 
-public class ExerciciocomFor {
+public class ExerciciocomFor04 {
 	public static void main(String[] args) {
-		for (int N=1;N<=10;N++) {
-			if (N%3 ==0) {
+		for (int N=10;N>0;N--) {
 			System.out.println(N);
-			break;
-			}
 		}
 	}
 
