@@ -1,15 +1,11 @@
-package Poli;
+package Encapsulamento;
 
 public class Chamando {
 	public static void main(String[] args) {
-		
-		Animal a1 = new Animal("Tatá");
-		
-		a1.comer();
-		
-		
-		Peixes a2 = new Peixes("Milenna");
-		a2.nadando();
+	
+	Retangulo perimetro = new Retangulo();
+	perimetro.Ajustarbase(5);
+	perimetro.Ajustaraltura(5); 
+	System.out.println(perimetro);
 	}
-
 }
